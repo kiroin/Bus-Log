@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+        <title>Get device info test</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+            <script type="text/javascript" src="phonegap-1.3.0.js"></script>
+            <script type="text/javascript">
+               // determine if PhoneGap is ready
+			function onLoad() {
+				document.addEventListener("deviceready", onDeviceReady, false);
+			}
+            function logResults(){
+                alert("hi");
+                function onSuccess(position){
+                    alert(position.coords.latitude);
+                }
+                function onError(error){
+                    alert('code: ' + error);
+                }
+                
+                // navigator.geolocation.getCurretPosition(onSuccess, onError);
+                
+            }
+            // ok phonegap is ready
+			function onDeviceReady(){
+                alert("ready");
+			}
+
+                
+		  </script>
+    </head> 
+    <body onload="onLoad();"> 
+        
+        <h1>Get location</h1>
+	   <div>
+           <form>
+              <input type="button" onClick="logResults();" value="clickme">
+           </form>
+	   </div>
+	   <div id="results">
+	   </div>
+        
+    </body>
+</html>

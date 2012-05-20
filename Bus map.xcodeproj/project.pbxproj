@@ -33,10 +33,11 @@
 		0A6D8AFB155A196B00828CEE /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D8AFA155A196B00828CEE /* Capture.bundle */; };
 		0A6D8AFD155A196B00828CEE /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D8AFC155A196B00828CEE /* PhoneGap.plist */; };
 		0A6D8B01155A196B00828CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D8B00155A196B00828CEE /* AppDelegate.m */; };
+		0A6D8B13155A1CF800828CEE /* www in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D8B12155A1CF800828CEE /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A6D8ABC155A196B00828CEE /* Bus Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bus Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6D8ABC155A196B00828CEE /* Bus map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bus map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6D8AC0155A196B00828CEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A6D8AC2155A196B00828CEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A6D8AC4155A196B00828CEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,10 +51,10 @@
 		0A6D8AD4155A196B00828CEE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0A6D8AD6155A196B00828CEE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0A6D8AD8155A196B00828CEE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		0A6D8ADC155A196B00828CEE /* Bus Log-Info.plist */ = {isa = PBXFileReference; path = "Bus Log-Info.plist"; sourceTree = "<group>"; };
+		0A6D8ADC155A196B00828CEE /* Bus map-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bus map-Info.plist"; sourceTree = "<group>"; };
 		0A6D8ADE155A196B00828CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A6D8AE0155A196B00828CEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0A6D8AE2155A196B00828CEE /* Bus Log-Prefix.pch */ = {isa = PBXFileReference; path = "Bus Log-Prefix.pch"; sourceTree = "<group>"; };
+		0A6D8AE2155A196B00828CEE /* Bus map-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bus map-Prefix.pch"; sourceTree = "<group>"; };
 		0A6D8AE3155A196B00828CEE /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		0A6D8AE8155A196B00828CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A6D8AEC155A196B00828CEE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,9 +65,10 @@
 		0A6D8AF8155A196B00828CEE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		0A6D8AFA155A196B00828CEE /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		0A6D8AFC155A196B00828CEE /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		0A6D8AFF155A196B00828CEE /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		0A6D8AFF155A196B00828CEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		0A6D8B00155A196B00828CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		0A6D8B03155A196C00828CEE /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		0A6D8B03155A196C00828CEE /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		0A6D8B12155A1CF800828CEE /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		0A6D8AAE155A196B00828CEE = {
 			isa = PBXGroup;
 			children = (
+				0A6D8B12155A1CF800828CEE /* www */,
 				0A6D8ADA155A196B00828CEE /* Bus Log */,
 				0A6D8ABF155A196B00828CEE /* Frameworks */,
 				0A6D8ABD155A196B00828CEE /* Products */,
@@ -113,7 +116,7 @@
 		0A6D8ABD155A196B00828CEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A6D8ABC155A196B00828CEE /* Bus Log.app */,
+				0A6D8ABC155A196B00828CEE /* Bus map.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,10 +156,10 @@
 		0A6D8ADB155A196B00828CEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0A6D8ADC155A196B00828CEE /* Bus Log-Info.plist */,
+				0A6D8ADC155A196B00828CEE /* Bus map-Info.plist */,
 				0A6D8ADD155A196B00828CEE /* InfoPlist.strings */,
 				0A6D8AE0155A196B00828CEE /* main.m */,
-				0A6D8AE2155A196B00828CEE /* Bus Log-Prefix.pch */,
+				0A6D8AE2155A196B00828CEE /* Bus map-Prefix.pch */,
 				0A6D8AFC155A196B00828CEE /* PhoneGap.plist */,
 			);
 			name = "Supporting Files";
@@ -229,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A6D8ABB155A196B00828CEE /* Bus Log */ = {
+		0A6D8ABB155A196B00828CEE /* Bus map */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6D8B06155A196C00828CEE /* Build configuration list for PBXNativeTarget "Bus Log" */;
+			buildConfigurationList = 0A6D8B06155A196C00828CEE /* Build configuration list for PBXNativeTarget "Bus map" */;
 			buildPhases = (
 				0A6D8AB5155A196B00828CEE /* Sources */,
 				0A6D8AB6155A196B00828CEE /* Frameworks */,
@@ -244,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = "Bus Log";
+			name = "Bus map";
 			productName = "Bus Log";
-			productReference = 0A6D8ABC155A196B00828CEE /* Bus Log.app */;
+			productReference = 0A6D8ABC155A196B00828CEE /* Bus map.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +261,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Yukiko Design";
 			};
-			buildConfigurationList = 0A6D8AB3155A196B00828CEE /* Build configuration list for PBXProject "Bus Log" */;
+			buildConfigurationList = 0A6D8AB3155A196B00828CEE /* Build configuration list for PBXProject "Bus map" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -271,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A6D8ABB155A196B00828CEE /* Bus Log */,
+				0A6D8ABB155A196B00828CEE /* Bus map */,
 			);
 		};
 /* End PBXProject section */
@@ -291,6 +294,7 @@
 				0A6D8AF9155A196B00828CEE /* Default@2x.png in Resources */,
 				0A6D8AFB155A196B00828CEE /* Capture.bundle in Resources */,
 				0A6D8AFD155A196B00828CEE /* PhoneGap.plist in Resources */,
+				0A6D8B13155A1CF800828CEE /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,9 +415,9 @@
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Bus Log/Bus Log-Prefix.pch";
+				GCC_PREFIX_HEADER = "Bus Log/Bus map-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
-				INFOPLIST_FILE = "Bus Log/Bus Log-Info.plist";
+				INFOPLIST_FILE = "Bus Log/Bus map-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -424,7 +428,7 @@
 					"-weak_library",
 					/usr/lib/libSystem.B.dylib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bus map";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,9 +442,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Bus Log/Bus Log-Prefix.pch";
+				GCC_PREFIX_HEADER = "Bus Log/Bus map-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
-				INFOPLIST_FILE = "Bus Log/Bus Log-Info.plist";
+				INFOPLIST_FILE = "Bus Log/Bus map-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -451,7 +455,7 @@
 					"-weak_library",
 					/usr/lib/libSystem.B.dylib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bus map";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -461,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A6D8AB3155A196B00828CEE /* Build configuration list for PBXProject "Bus Log" */ = {
+		0A6D8AB3155A196B00828CEE /* Build configuration list for PBXProject "Bus map" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6D8B04155A196C00828CEE /* Debug */,
@@ -470,13 +474,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A6D8B06155A196C00828CEE /* Build configuration list for PBXNativeTarget "Bus Log" */ = {
+		0A6D8B06155A196C00828CEE /* Build configuration list for PBXNativeTarget "Bus map" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6D8B07155A196C00828CEE /* Debug */,
 				0A6D8B08155A196C00828CEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

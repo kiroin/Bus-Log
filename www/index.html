@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+        <title>Get device info test</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+            <script type="text/javascript" src="phonegap-1.3.0.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script type="text/javascript"
+                src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD9dWUuIWs1AaO_frUNzqGo7pRGtQW-Jug&sensor=false">
+            </script>
+            <style type="text/css">
+                html { height: 100% }
+                body { height: 100%; margin: 0; padding: 0; }
+                #map_canvas { height: 40%; width: 100%; }
+            </style>
+            <script type="text/javascript">
+                // determine if PhoneGap is ready
+                function onLoad() {
+                    document.addEventListener("deviceready", onDeviceReady, false);
+                }
+                
+                // ok phonegap is ready
+                function onDeviceReady(){
+					$(document).ready(function(){
+                    
+									  var myDB = window.openDatabase("busDB", "1.0", "Bus DB", 100000);
+                   
+                    
+                    function queryDB(myDB){
+                        myDB.executeSql('SELECT * FROM test1', [], querySuccess, errorDB);
+                    }
+                    
+                    function querySuccess(myDB, results){
+                        
+                        var len = results.rows.length;
+                        for (var i=0; i<len; i++){
+							$('#map_canvas').append("Row = " + i + " Firstname = " + results.rows.item(i).id + " Lastname = " + results.rows.item(i).name + "<br>");
+
+                        }
+                    }
+                    function populateDB(myDB){
+                        // myDB.executeSql('DROP TABLE IF EXISTS test1');
+                        myDB.executeSql('CREATE TABLE IF NOT EXISTS test1 (id AUTO_INCREMENT, name)');
+                        myDB.executeSql('INSERT INTO test1 (name) VALUES ("Tony")');
+                        myDB.executeSql('INSERT INTO test1 (name) VALUES ("Bill")');
+                        myDB.executeSql('INSERT INTO test1 (name) VALUES ("Tom")');
+                    }
+                    function successDB(){
+                        var myDB = window.openDatabase("busDB", "1.0", "Bus DB", 100000);
+                        myDB.transaction(queryDB, errorDB);
+                    }
+                    function errorDB(err){
+                        alert ("Error processing SQL : " + err.code);
+                    }
+                    
+                    
+                    myDB.transaction(populateDB, errorDB, successDB);
+                  
+                        $('#clickme').click(function(){
+                                            alert("click");
+                        });
+                     });
+                }
+
+
+
+                </script>
+            
+
+            </head> 
+    <body onload="onLoad();"> 
+        
+        <h1>Get location</h1>
+        <h2 id="starttime"></h2>
+            
+        <div id="map_canvas"></div>
+        <div id="geolocation">
+            <form>
+                 <input type="button" value="Submit" id="clickme"/>
+            </form>
+        </div>
+        
+    </body>
+</html>
