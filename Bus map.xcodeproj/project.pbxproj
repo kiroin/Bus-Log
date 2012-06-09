@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4B393C15787E0D00465E4B /* main.js in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B393B15787E0D00465E4B /* main.js */; };
 		0A6D8AC1155A196B00828CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6D8AC0155A196B00828CEE /* Foundation.framework */; };
 		0A6D8AC3155A196B00828CEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6D8AC2155A196B00828CEE /* UIKit.framework */; };
 		0A6D8AC5155A196B00828CEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6D8AC4155A196B00828CEE /* CoreGraphics.framework */; };
@@ -34,9 +35,11 @@
 		0A6D8AFD155A196B00828CEE /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D8AFC155A196B00828CEE /* PhoneGap.plist */; };
 		0A6D8B01155A196B00828CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D8B00155A196B00828CEE /* AppDelegate.m */; };
 		0A6D8B13155A1CF800828CEE /* www in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D8B12155A1CF800828CEE /* www */; };
+		0A86F60A157DD99800CCD4E0 /* show-screen.js in Sources */ = {isa = PBXBuildFile; fileRef = 0A86F609157DD99800CCD4E0 /* show-screen.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A4B393B15787E0D00465E4B /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = www/main.js; sourceTree = "<group>"; };
 		0A6D8ABC155A196B00828CEE /* Bus map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bus map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6D8AC0155A196B00828CEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A6D8AC2155A196B00828CEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -69,6 +72,7 @@
 		0A6D8B00155A196B00828CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		0A6D8B03155A196C00828CEE /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		0A6D8B12155A1CF800828CEE /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		0A86F609157DD99800CCD4E0 /* show-screen.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "show-screen.js"; path = "www/show-screen.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		0A6D8AAE155A196B00828CEE = {
 			isa = PBXGroup;
 			children = (
+				0A86F609157DD99800CCD4E0 /* show-screen.js */,
+				0A4B393B15787E0D00465E4B /* main.js */,
 				0A6D8B12155A1CF800828CEE /* www */,
 				0A6D8ADA155A196B00828CEE /* Bus Log */,
 				0A6D8ABF155A196B00828CEE /* Frameworks */,
@@ -323,6 +329,8 @@
 			files = (
 				0A6D8AE1155A196B00828CEE /* main.m in Sources */,
 				0A6D8B01155A196B00828CEE /* AppDelegate.m in Sources */,
+				0A4B393C15787E0D00465E4B /* main.js in Sources */,
+				0A86F60A157DD99800CCD4E0 /* show-screen.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
