@@ -17,29 +17,26 @@
 				#addBtn:active{background-color: #3399cc;}
 				 */
 				</style>
-			<script src="log.js" type="text/javascript"></script>
-			<script src="show-screen.js" type="text/javascript"></script>
-			<script src="main.js" type="text/javascript"></script>
+			
+			<!-- start js includes -->
+				<!-- display files -->
+					<script src="screens/show-screen.js" type="text/javascript"></script>
+					<script src="screens/screen-home.js" type="text/javascript"></script>
+				
+				<!-- database manipulation files -->
+					<script src="data/log.js" type="text/javascript"></script>
+				
+			
+				<!-- main js file -->
+					<script src="main.js" type="text/javascript"></script>
+			<!-- end js includes -->
 			
 			</head> 
 	<body onload="onLoad();"> 
 		<div id="content">
-			<div id="screen-add-log">
-				<h1>Get location</h1>
-				<form>
-					<input type="button" value="Add Log" id="addBtn"/>
-				</form>
-				
-				<div id="status-message">
-					
-				</div>
-			</div>
-			<div id="map_canvas"></div>
-			<div id="geolocation">
-				
-				
-				
-			</div>
+			<div id="loading-content">Loading content...</div>
+			<div id="map-canvas"></div>
+			<div id="geolocation"></div>
 		</div>
 		
 		
