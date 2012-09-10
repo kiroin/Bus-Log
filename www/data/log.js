@@ -17,7 +17,7 @@ function getLogData(){
 	return myLog;
 }
 
-
+// ## createDB ## Creates initial table with log types
 function createDB(inDB){
 	var myLog, 
 	logTypeCount,
@@ -35,8 +35,8 @@ function createDB(inDB){
 	
 }
 
-
-function populateDB(inDB){
+// ## addLog ## grabs a new log and adds it to the table
+function addLog(inDB){
 	var myLog, 
 		logTypeCount,
 		logTypes,
@@ -72,36 +72,110 @@ function errorDB(err){
 function successDB(){
 	// alert("success");
 }
-function queryDB(tx){
-	tx.executeSql('SELECT * FROM table1', [], querySuccess, errorDB);
+
+function getLogs(tx){
+	tx.executeSql('SELECT * FROM table1', [], getLogsSuccess, errorDB);
 }
 
-function querySuccess(tx, results){
+
+function getLogsSuccess(tx, results){
+	// takes in results of table and displays html inside #log-area
+	//
+	// id: [xx] time: [xx:xx am]
 	var myString, 
 		numRows, 
 		item, 
 		x, 
 		i,
-		myTime = {};
+		myTime, hours, minutes, dHours, currentTime,
+		cMinTotal, myTimeMinTotal, diffMinTotal, diffHours, diffMinutes,
+		countdownTime = {};
+	var ampm="am";
 	
-	numRows = results.rows.length;
 	myString = ""; 
+
+	currentTime = new Date(); //current time
+	//currentTime = new Date(2012, 09, 09, 22, 15, 0000); //sept 9, 10:00pm
+	myString += "<h2>Current time: " + currentTime.toString() + "</h2>";
+	numRows = results.rows.length;
 
 	for(i=0; i< numRows; i++){
 		item = results.rows.item(i);
+		myString += "<div class='log-item'>";
+		
 		for( x in item){
 			if(x == "time"){
+				// show the logged time, and diff between now and then
+				
 				myTime = new Date(item[x]);
-				myString += x + ": " + myTime.toString()  + " ";
+				hours = dHours = myTime.getHours();
+				if(hours >= 12){
+					ampm = "pm";
+					dHours-=12;
+				}
+				if(hours == 0){
+					dHours = 12;
+					ampm = "am";
+				}
+				minutes = myTime.getMinutes();
+				
+				// change all to minutes, get diff, then restructure
+				cMinTotal = (currentTime.getHours() * 60) + currentTime.getMinutes(); // current time in minutes 
+				myTimeMinTotal = (myTime.getHours() * 60) + myTime.getMinutes(); // myTime in minutes
+				diffMinTotal = cMinTotal - myTimeMinTotal;
+				
+				if(diffMinTotal < 0){ // if upcoming
+					
+					diffHours = Math.floor(-1* diffMinTotal /60); // rounded down
+					diffMinutes = -1* diffMinTotal % 60; // remaining minutes
+					
+					myString += "<span class='upcoming-time'><span class='time'>" + dHours.toString() +":"+ minutes.toString() + " " + ampm + "</span>";
+					myString += " (coming in ";
+					if(diffHours>0){
+						myString+= diffHours + " hour";
+						if(diffHours >1){ myString+= "s";}
+						myString+= ", ";
+					}
+					if(diffMinutes !=1){
+						myString+= diffMinutes + " minutes)"; // difference in minutes
+					}
+					else{
+						myString+= "1 minute)";
+					}
+					myString += "</span>";
+
+					
+				}
+				else{	 // if past
+					diffHours = Math.floor(diffMinTotal /60); // rounded down
+					diffMinutes = diffMinTotal % 60; // remaining minutes
+					myString += "<span class='past-time'><span class='time'>" + dHours.toString() +":"+ minutes.toString() + " " + ampm + "</span>";
+					myString += " (left ";
+					if(diffHours>0){
+						myString+= diffHours + " hour";
+						if(diffHours >1){ myString+= "s";}
+						myString+= ", ";
+					}
+					if(diffMinutes !=1){
+						myString+= diffMinutes + " minutes ago)"; // difference in minutes
+					}
+					else{
+						myString+= "1 minute ago)";
+					}
+					myString += "</span>";
+				}
 			}
 			else{
-				myString += x + ": " + item[x] + " ";
+				// myString += x + ": " + item[x] + " ";
 			}
 		}
-		myString += "<br>";
+		
+		myString +="</div>";
 	}
+	myString+="</div> \n<!-- end log-list -->";
 
-	$('#status-message').html(myString);
+	$('#log-list').html(myString);
 }
+
 
 

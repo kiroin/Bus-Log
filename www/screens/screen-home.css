@@ -1,0 +1,12 @@
+/* screen-home.css */
+body{
+	font-family: Helvetica, arial;
+	font-size: .8em;
+}
+.past-time{
+	color: #6e332b;
+}
+.upcoming-time{
+	color: #386e2b;
+	background-color: #e3fbe8;
+}

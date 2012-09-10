@@ -10,7 +10,8 @@ function ScreenHome(){
 	// display
 	///////////////////////////	
 	$('#content').load('screens/screen-home.html', function(){
-										 $('#log-area').hide();
+										 viewAllLogs();
+										 // $('#log-area').hide();
 										 
 										 // On button click: initate storage
 										 //$('#addBtn').click(function(){alert ('click!')});
@@ -27,26 +28,29 @@ function ScreenHome(){
 	///////////////////////////
 	// behavior
 	///////////////////////////
+
 	// ## viewAllLogs ##
 	function viewAllLogs(){
 		var myDB = getDB();
 		$('#log-area').show();
-		myDB.transaction(queryDB, errorDB);
+		myDB.transaction(getLogs, errorDB);
 	}
 	
 	// ## getAndStoreLog ##
 	// get Log, store in a DB and store in myBusLog object
 	function getAndStoreLog(){									
 		var myDB = getDB();
-		myDB.transaction(populateDB, errorDB, successDB);
+		myDB.transaction(addLog, storeSuccess, errorDB);
+		
 	}
 
 	
 	// on store success log console
-	function storeSuccess(inLog){
+	function storeSuccess(tx, results){
 		console.log("Store is successful ");
+		$('#log-area').show();
 		//$('#status-message').html('Sucessfully logged time:' + callback.time );
-		$('#status-message').html('Successfully logged: ' + getLogHtml(inLog));
+		$('#status-message').html('Successfully logged: ');
 	}
 	
 	

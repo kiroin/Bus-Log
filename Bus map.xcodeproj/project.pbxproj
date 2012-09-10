@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A06A66D15FDCC68002783A1 /* screen-home.css in Resources */ = {isa = PBXBuildFile; fileRef = 0A06A66C15FDCC68002783A1 /* screen-home.css */; };
 		0A4B393C15787E0D00465E4B /* main.js in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B393B15787E0D00465E4B /* main.js */; };
 		0A6D8AC1155A196B00828CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6D8AC0155A196B00828CEE /* Foundation.framework */; };
 		0A6D8AC3155A196B00828CEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6D8AC2155A196B00828CEE /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A06A66C15FDCC68002783A1 /* screen-home.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "screen-home.css"; path = "www/screens/screen-home.css"; sourceTree = "<group>"; };
 		0A4B393B15787E0D00465E4B /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = www/main.js; sourceTree = "<group>"; };
 		0A6D8ABC155A196B00828CEE /* Bus map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bus map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6D8AC0155A196B00828CEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +112,7 @@
 		0A6D8AAE155A196B00828CEE = {
 			isa = PBXGroup;
 			children = (
+				0A06A66C15FDCC68002783A1 /* screen-home.css */,
 				0ABE389515A22A17008AAC79 /* screen-home.html */,
 				0A4B393B15787E0D00465E4B /* main.js */,
 				0A6D8B12155A1CF800828CEE /* www */,
@@ -302,6 +305,7 @@
 				0A6D8AFD155A196B00828CEE /* PhoneGap.plist in Resources */,
 				0A6D8B13155A1CF800828CEE /* www in Resources */,
 				0ABE389615A22A17008AAC79 /* screen-home.html in Resources */,
+				0A06A66D15FDCC68002783A1 /* screen-home.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
