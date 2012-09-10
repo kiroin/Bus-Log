@@ -40,7 +40,7 @@ function ScreenHome(){
 	// get Log, store in a DB and store in myBusLog object
 	function getAndStoreLog(){									
 		var myDB = getDB();
-		myDB.transaction(addLog, storeSuccess, errorDB);
+		myDB.transaction(addLog, errorDB, storeSuccess);
 		
 	}
 
@@ -50,7 +50,8 @@ function ScreenHome(){
 		console.log("Store is successful ");
 		$('#log-area').show();
 		//$('#status-message').html('Sucessfully logged time:' + callback.time );
-		$('#status-message').html('Successfully logged: ');
+		$('#status-message').html('Logged!');
+		viewAllLogs();
 	}
 	
 	
